@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>WP_test</title>
+	<link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+	<div class="wrapper">
+		<main class="container">
+			<section class="container__header header-section">
+				<div class="header-section__wrapper">
+					<img src="./img/logo.png" class="logo">
+					<header class="tariff-title">Premium</header>
+					<div id="accordion" class="received-options">
+						<h4 class="received-options__title received-options__title_icon_i1">Закрытые турниры</h4>
+						<div class="received-options__text">Участвуй в закрытых турнирах, с возможностью выиграть высокие призовые и эксклюзивные призы.</div>
+						<h4 class="received-options__title received-options__title_icon_i2">Приоритетная поддержка</h4>
+						<div class="received-options__text">Участвуй в закрытых турнирах, с возможностью выиграть высокие призовые и эксклюзивные призы.</div>
+						<h4 class="received-options__title received-options__title_icon_i3">Премиум бейдж</h4>
+						<div class="received-options__text">Участвуй в закрытых турнирах, с возможностью выиграть высокие призовые и эксклюзивные призы.</div>
+						<h4 class="received-options__title received-options__title_icon_i4">Расширенная статистика</h4>
+						<div class="received-options__text">Участвуй в закрытых турнирах, с возможностью выиграть высокие призовые и эксклюзивные призы.</div>
+					</div>
+				</div>
+			</section>
+			<section id="main-container_js" class="container__main">
+			</section>
+		</main>
+	</div>
+<script id="parameters_tpl" type="text/x-handlebars-template">
+	<div class="main-page">
+		<div class="main-page__top-box">
+			<div class="parameters-title parameters-title_type_time">Выбери период:</div>
+			<div class="parameters-section">
+				<div class="parameter-item parameter-item_active">
+					<div class="parameter-item__main-text">Месяц</div>
+				</div>
+				<div class="parameter-item">
+					<div class="parameter-item__main-text">6 месяцев</div>
+					<div class="parameter-item__note-text parameter-item__note-text_color_green">Экномия 10%</div>
+				</div>
+				<div class="parameter-item">
+					<div class="parameter-item__main-text">12 месяцев</div>
+					<div class="parameter-item__note-text parameter-item__note-text_color_green">Экномия 15%</div>
+				</div>
+			</div>
+			<div class="parameters-title parameters-title_type_price">Выбери стоимость:</div>
+			<div class="parameters-section">
+				<div class="parameter-item">
+					<div class="parameter-item__main-text">$4</div>
+					<div class="parameter-item__note-text parameter-item__note-text_color_grey">В месяц</div>
+				</div>
+				<div class="parameter-item parameter-item_active">
+					<div class="parameter-item__main-text">2,800WP</div>
+					<div class="parameter-item__note-text parameter-item__note-text_color_grey">В месяц</div>
+				</div>
+			</div>
+		</div>
+		<div class="main-page__bottom-box bottom-box">
+			<div class="total">
+				<div class="total__name">Всего:</div>
+				<div class="total__price">2,800WP</div>
+			</div>
+			<div class="info-text">Подписка за счет WP Points не обновляется автоматически
+			<div class="button-box">
+				<div></div>
+				<button id="next-button-js" class="button-next">Далее</button>
+			</div>
+		</div>
+	</div>
+</script>
+<script id="tabs_tpl" type="text/x-handlebars-template">
+	<div class="main-page">
+		<div class="main-page__top-box">
+			<div id="tabs" class="tabs-payment">
+				<ul class="payment-head">
+					<li class="payment-head__item"><a class="payment-head__link" href="#tabs-1">Credit card</a></li>
+					<li class="payment-head__item"><a class="payment-head__link" href="#tabs-2">PayPal</a></li>
+					<li class="payment-head__item"><a class="payment-head__link" href="#tabs-3">WP Balance</a></li>
+				</ul>
+				<div id="tabs-1" class="credit-card">
+					<div class="credit-card__top-line">
+						<div class="credit-card__top-left">
+							<ul class="card-icon">
+								<li class="card-icon__item card-icon__item_i_mastercard"></li>
+								<li class="card-icon__item card-icon__item_i_visa"></li>
+								<li class="card-icon__item card-icon__item_i_amex"></li>
+							</ul>
+						</div>
+						<div class="credit-card__top-right">
+							<a href="#" class="lock-info">Платежная информация защищена</a>
+						</div>
+					</div>
+					<div class="data-card-box">
+						<div class="data-card-box__item data-card-box__item_size_max input-box">
+							<div class="input-box__title">Card number</div>
+							<input class="input-box__input" type="" placeholder="5167 9855 6160 0974">
+						</div>
+						<div class="data-card-box__item data-card-box__item_size_min input-box">
+							<div class="input-box__title">Valid thru</div>
+							<input class="input-box__input" type="" placeholder="MM/YY">
+						</div>
+						<div class="data-card-box__item data-card-box__item_size_min input-box">
+							<div class="input-box__title">Security code</div>
+							<input class="input-box__input" type="" placeholder="••••">
+						</div>
+					</div>
+				</div>
+				<div id="tabs-2" class="paypal-box">
+					<div class="paypal-box__text paypal-info">Подпишись на WePlay! Premium используя PayPal account</div>
+					<button class="paypal-box__button go-paypal-button">Перейти на PayPal</button>
+					<div class="paypal-box__link-box"><a href="#" class="lock-info">Платежная информация защищена</a></div>
+				</div>
+				<div id="tabs-3" class="wp-balance-box">
+					<div class="wp-balance-total">
+						<div class="wp-balance-total__name">WP Balance</div>
+						<div class="wp-balance-total__price">$5</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="main-page__bottom-box bottom-box">
+			<div class="total">
+				<div class="total__name">Всего:</div>
+				<div class="total__price">$4</div>
+			</div>
+			<div class="button-box">
+				<button id="back-button-js" class="button-prev">Назад</button>
+				<button id="to-send-button-js" class="button-next">Оплатить</button>
+			</div>
+			<div class="bottom-box__foot footer-text">By proceeding payment  I agree to WePlay! <a class="footer-text__link" href="#">Terms & Conditions and Privacy Policy</a></div>
+		</div>
+	</div>
+</script>
+<script id="subscription-page_tpl" type="text/x-handlebars-template">
+	<div class="subscription-page">
+		<div class="subscription-page__wrapper">
+			<header class="title-h1">You’re now Premium!</header>
+			<img class="icon-subscription" src="./img/icon-subscription.png">
+			<button class="subscription-page__but button-next">Выбрать турнир</button>
+			<div class="footer-text">Manage your Premium subscription in <a class="footer-text__link" href="#">Account settings</a></div>
+		</div>
+	</div>
+</script>
+<script src="./js/handlebars-v4.1.2.js"></script>
+<script src="./js/jquery-3.4.1.min.js"></script>
+<script src="./js/jquery-ui.min.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>
